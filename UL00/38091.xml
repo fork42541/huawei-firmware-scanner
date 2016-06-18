@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+  <component name="TCPU" version="CHM-UL00C00B521-log"/>
+  <default-language name="zh-cn">2052</default-language>
+  <language code="2052" name="zh-cn">
+    <features module="">
+      <feature>亲爱的用户，本次升级主要解决概率性解锁失败、升级后WIFI无法自动连接，同时合入Google系统补丁，优化第三方应用兼容性。推荐您升级使用！</feature>
+    </features>
+    <features module="【推荐】">
+      <feature>【系统】 
+优化 系统内置参数,提升系统稳定性
+新增 google系统补丁，提升系统稳定性
+【桌面】
+修复 概率性解锁失败问题
+修复 桌面数据部分场景概率性显示异常问题
+【WIFI】
+修复 HOTA升级后, WIFI概率性无法自动连接问题
+【第三方】
+优化 游戏中心、淘宝等第三方厂家应用兼容性
+【存储】
+修复 升级后部分安装在外置存储卡的应用无法使用问题
+【输入法】
+优化 搜狗输入法显示效果
+</feature>
+    </features>
+    <features module="【更新注意事项】">
+      <feature>执行更新前，请确保手机没有 ROOT。更新过程中，如果遇到任何问题，您可以访问“手机服务”应用或“花粉俱乐部（http://club.huawei.com）”寻求支持。</feature>
+    </features>
+  </language>
+</root>

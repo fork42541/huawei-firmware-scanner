@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+  <component name="TCPU" version="CHM-TL00C01B512 " />
+  <default-language name="zh-cn">2052</default-language>
+  <language code="2052" name="zh-cn">
+    <features module="">
+      <feature>本次升级主要优化音频参数、HDR拍照功能，新增谷歌补丁，增强第三方应用兼容性，提升用户体验。推荐您升级使用。</feature>
+    </features>
+    <features module="【推荐】">
+      <feature>优化 USB系统升级功能
+优化 HDR拍照功能
+优化 音频参数
+优化 黑屏手势功能
+优化 第三方应用兼容性
+修复 双击唤醒功能概率性误触发问题
+新增 谷歌补丁，提升系统稳定性
+</feature>
+    </features>
+    <features module="升级注意事项：">
+      <feature>请确保手机没有root，电量充足，剩余存储空间足够，如果升级过程中遇到任何问题，请到花粉俱乐部（ http://club.huawei.com/ ）寻求支持。</feature>
+    </features>
+  </language>
+</root>
