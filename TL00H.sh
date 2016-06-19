@@ -29,8 +29,8 @@ for ((i=$v;i<99999;i++));do
     echo
     changelog_url="http://update.hicloud.com:8180/TDS/data/files/p3/s15/G1022/g223/v$i/f1/full/changelog.xml"
     curl $changelog_url > $PWD/TL00H/$i.xml
-
-    Filter
+    rm $PWD/TL00H/$i.xml
+#    Filter
 done
 
 for xml in `find $PWD/TL00H`;do

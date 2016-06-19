@@ -44,8 +44,8 @@ for ((i=$query_version;i<99999;i++));do
     echo
     changelog_url="http://update.hicloud.com:8180/TDS/data/files/p3/s15/G1022/g$ml/v$i/f1/full/changelog.xml"
     curl $changelog_url > $PWD/$model/$i.xml
-
-    Filter
+    rm $PWD/$model/$i.xml
+#    Filter
 done
 
 for xml in `find $PWD/$model`;do
