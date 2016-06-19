@@ -20,9 +20,9 @@ case $model in
 esac
 
 Filter(){
-    for f in `ls $PWD/$model`; do
-        Size=`ls -il $PWD/$model/$f | awk '{print $6}'`
-        File=`ls -il $PWD/$model/$f | awk '{print $10}'`
+    if [[ $1 == "1" ]]; then
+        File="$PWD/$model/$i.xml"
+        Size=`ls -il $File | awk '{print $6}'`
         if [ $Size == "162" ] || [ $Size == "0" ];then
             echo
             echo "This is Not to Download File, Will be Deleted!"
@@ -30,7 +30,19 @@ Filter(){
             echo "Size:$Size"
             rm $File
         fi
-    done
+    else
+        for f in `ls $PWD/$model`; do
+            File=`ls -il $PWD/$model/$f | awk '{print $10}'`
+            Size=`ls -il $PWD/$model/$f | awk '{print $6}'`
+            if [ $Size == "162" ] || [ $Size == "0" ];then
+                echo
+                echo "This is Not to Download File, Will be Deleted!"
+                echo "File:$File"
+                echo "Size:$Size"
+                rm $File
+            fi
+        done
+    fi
 }
 
 Filter
@@ -44,8 +56,8 @@ for ((i=$query_version;i<99999;i++));do
     echo
     changelog_url="http://update.hicloud.com:8180/TDS/data/files/p3/s15/G1022/g$ml/v$i/f1/full/changelog.xml"
     curl $changelog_url > $PWD/$model/$i.xml
-    rm $PWD/$model/$i.xml
-#    Filter
+
+    Filter 1
 done
 
 for xml in `find $PWD/$model`;do

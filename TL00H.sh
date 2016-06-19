@@ -8,9 +8,9 @@ echo "您打算从哪个版本开始查询（推荐从 40172 [B535] 开始）：
 read v
 
 Filter(){
-    for f in `ls $PWD/TL00H`; do
-        Size=`ls -il $PWD/TL00H/$f | awk '{print $6}'`
-        File=`ls -il $PWD/TL00H/$f | awk '{print $10}'`
+    if [[ $1 == "1" ]]; then
+        File="$PWD/TL00H/$i.xml"
+        Size=`ls -il $File | awk '{print $6}'`
         if [ $Size == "162" ] || [ $Size == "0" ];then
             echo
             echo "This is Not to Download File, Will be Deleted!"
@@ -18,7 +18,19 @@ Filter(){
             echo "Size:$Size"
             rm $File
         fi
-    done
+    else
+        for f in `ls $PWD/TL00H`; do
+            File=`ls -il $PWD/TL00H/$i.xml | awk '{print $10}'`
+            Size=`ls -il $PWD/TL00H/$i.xml | awk '{print $6}'`
+            if [ $Size == "162" ] || [ $Size == "0" ];then
+                echo
+                echo "This is Not to Download File, Will be Deleted!"
+                echo "File:$File"
+                echo "Size:$Size"
+                rm $File
+            fi
+        done
+    fi
 }
 
 Filter
@@ -29,8 +41,8 @@ for ((i=$v;i<99999;i++));do
     echo
     changelog_url="http://update.hicloud.com:8180/TDS/data/files/p3/s15/G1022/g223/v$i/f1/full/changelog.xml"
     curl $changelog_url > $PWD/TL00H/$i.xml
-    rm $PWD/TL00H/$i.xml
-#    Filter
+
+    Filter 1
 done
 
 for xml in `find $PWD/TL00H`;do
