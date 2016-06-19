@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+  <component name="TCPU" version="CHM-UL00C00B527-log" />
+  <cleardata-flag>false</cleardata-flag>
+  <romsurvey-flag>true</romsurvey-flag>
+  <notify-level>40</notify-level>
+  <point-version>false</point-version>
+  <force-app-upgrade>false</force-app-upgrade>
+  <force-app-upgrade-list>
+  </force-app-upgrade-list>
+  <default-language name="zh-cn">2052</default-language>
+  <language code="2052" name="zh-cn">
+    <features module="" type="header">
+      <feature>亲爱的用户，本次升级主要解决WLAN低概率连接失败、升级后部分安装到SD中的应用无法使用问题，新增指南针应用，优化界面显示效果。推荐您升级使用！</feature>
+    </features>
+    <features module="【推荐】">
+      <feature>新增 指南针应用
+优化 图库中的照片概率性无法查看问题
+优化 横屏后，界面显示异常问题
+优化 多屏互动应用，解决概率性无法搜到机顶盒问题
+优化 HOA升级后，部分安装到SD卡中的应用无法使用问题
+优化 WLAN功能，解决小概率连接不上问题
+优化 动态壁纸功能，删除不常用的动态壁纸</feature>
+    </features>
+    <features module="【更新注意事项】" type="end">
+      <feature>执行更新前，请确保手机没有 ROOT。更新过程中，如果遇到任何问题，您可以访问“手机服务”应用或“花粉俱乐部（http://club.huawei.com）”寻求支持。</feature>
+    </features>
+  </language>
+</root>
